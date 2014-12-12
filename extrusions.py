@@ -17,6 +17,8 @@ with open('color.amf.gcode', 'r') as f:
 		words = line.split()
 		if len(words) > 0:
 			cmd = words[0]
+		else:
+			cmd = 'foobar'
 		if cmd == 'G1':
 			m = re.search('E(-?\d+\.?\d*)\D', line)
 			if m:

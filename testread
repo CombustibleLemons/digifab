@@ -1,0 +1,50 @@
+Here is a line
+Here is another
+
+That was an empty space.
+M104 S200 T0 ; set temperature #1
+M104 S200 T1 ; set temperature #2
+M104 S200 ; set temperature #3
+
+M109 S200 T0 ; set temperature #1
+M109 S200 T1 ; set temperature #2
+M109 S200 ; set temperature #3
+Let's see how that went.
+
+Alright, how about T commands
+; T0
+T0
+; T0
+T0
+; T0
+T0
+; T1
+T1
+; T1
+T1
+; T1
+T1
+; T0
+T0
+; T0
+T0
+; T0
+T0
+; T0
+T0
+; T0
+T0
+; T3
+T3
+; T4
+T4
+; T5
+T5
+; T3
+T3
+; T4
+T4
+; T5
+T5
+
+; END
