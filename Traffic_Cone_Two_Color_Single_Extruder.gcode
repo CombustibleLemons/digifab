@@ -623,7 +623,7 @@ G92 E0
 G1 Z0.650 F7800.000
 ; This is the beginning of a color change
 G92 E0
-G1 E1.00000
+; Z had just changed
 ; This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
@@ -5251,7 +5251,7 @@ G92 E0
 G1 Z5.450 F7800.000
 ; This is the beginning of a color change
 G92 E0
-G1 E-1.00000
+; Z had just changed
 ; This is the end of a color change
 G92 E0
 G1 X55.483 Y51.484 F7800.000
@@ -8813,7 +8813,7 @@ G92 E0
 G1 Z10.250 F7800.000
 ; This is the beginning of a color change
 G92 E0
-G1 E1.00000
+; Z had just changed
 ; This is the end of a color change
 G92 E0
 G1 X49.990 Y45.416 F7800.000
@@ -12473,7 +12473,7 @@ G92 E0
 G1 Z15.350 F7800.000
 ; This is the beginning of a color change
 G92 E0
-G1 E-1.00000
+; Z had just changed
 ; This is the end of a color change
 G92 E0
 G1 X49.833 Y46.584 F7800.000
@@ -15437,7 +15437,7 @@ G92 E0
 G1 Z20.450 F7800.000
 ; This is the beginning of a color change
 G92 E0
-G1 E1.00000
+; Z had just changed
 ; This is the end of a color change
 G92 E0
 G1 X49.886 Y47.752 F7800.000
