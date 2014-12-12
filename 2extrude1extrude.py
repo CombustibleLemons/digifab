@@ -13,11 +13,14 @@ with open('Traffic_Cone_Two_Color_Single_Extruder.gcode', 'w') as dst:
 
 			if cmd[0] == 'T':
 				dst.write('; This is the beginning of a color change\n')
+				dst.write('; Old line = ')
+				dst.write(line)
 				dst.write('G92 E0\n')
 				if cmd[1] not in t_appearances:
 					t_appearances[cmd[1]] = 0
 				t_appearances[cmd[1]] += 1
 				if t_appearances[cmd[1]] == 1 and z_just_changed:
+					dst.write('; this is the special case\n')
 					dst.write('G1 E1.00000\n')
 				if t_appearances[cmd[1]] > 1:
 					if not z_just_changed:
