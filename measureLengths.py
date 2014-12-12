@@ -36,7 +36,7 @@ def measure_lengths(serial_fd, channel, color_lengths):
 if __name__ == "__main__":
     # Parse the arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('--filename', default='Traffic_Cone_Dual_Extrusion/Traffic_Cone_Rings.amf.gcode')
+    parser.add_argument('--filename', default='Traffic_Cone_Dual_Extrusion\Traffic_Cone_Rings.amf.gcode')
     parser.add_argument('--serial_port', default=4)
     parser.add_argument('--channel', default=115200)
     args = parser.parse_args()
