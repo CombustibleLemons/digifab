@@ -19,7 +19,9 @@ M109 S200 ; wait for temperature to be reached
 G90 ; use absolute coordinates
 G92 E0
 M82 ; use absolute distances for extrusion
+This is the beginning of a color change
 G92 E0
+This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
 G92 E0
@@ -540,7 +542,9 @@ G1 X44.304 Y57.669 E1.36105
 G1 X44.416 Y57.781 E1.37573
 G1 X42.303 Y57.881 E1.57132
 G1 X42.121 Y57.699 E1.59523
+This is the beginning of a color change
 G92 E0
+This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
 G92 E0
@@ -617,8 +621,10 @@ M106 S255
 G1 F1800.000 E1.39930
 G92 E0
 G1 Z0.650 F7800.000
+This is the beginning of a color change
 G92 E0
 G1 E1.00000
+This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
 G92 E0
@@ -5243,8 +5249,10 @@ G1 X55.872 Y51.534 E2.15281
 G1 F1800.000 E1.15281
 G92 E0
 G1 Z5.450 F7800.000
+This is the beginning of a color change
 G92 E0
 G1 E-1.00000
+This is the end of a color change
 G92 E0
 G1 X55.483 Y51.484 F7800.000
 G1 E1.00000 F1800.000
@@ -8803,8 +8811,10 @@ G1 X49.930 Y45.034 E2.37902
 G1 F1800.000 E1.37902
 G92 E0
 G1 Z10.250 F7800.000
+This is the beginning of a color change
 G92 E0
 G1 E1.00000
+This is the end of a color change
 G92 E0
 G1 X49.990 Y45.416 F7800.000
 G1 E1.00000 F1800.000
@@ -12461,8 +12471,10 @@ G1 X49.770 Y46.208 E4.09788
 G1 F1800.000 E3.09788
 G92 E0
 G1 Z15.350 F7800.000
+This is the beginning of a color change
 G92 E0
 G1 E-1.00000
+This is the end of a color change
 G92 E0
 G1 X49.833 Y46.584 F7800.000
 G1 E1.00000 F1800.000
@@ -15423,8 +15435,10 @@ G1 X49.806 Y47.376 E1.72861
 G1 F1800.000 E0.72861
 G92 E0
 G1 Z20.450 F7800.000
+This is the beginning of a color change
 G92 E0
 G1 E1.00000
+This is the end of a color change
 G92 E0
 G1 X49.886 Y47.752 F7800.000
 G1 E1.00000 F1800.000
