@@ -1,7 +1,7 @@
 import re
 
-with open('testwrite.gcode', 'w') as dst:
-	with open('color.amf.gcode', 'r') as src:
+with open('Traffic_Cone_Two_Color_Single_Extruder.gcode', 'w') as dst:
+	with open('Traffic_Cone_Dual_Extrusion/Traffic_Cone_Rings.amf.gcode', 'r') as src:
 		t_appearances = {}
 		for line in src:
 			words = line.split()
