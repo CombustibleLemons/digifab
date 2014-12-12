@@ -2,7 +2,7 @@ import re
 
 with open('Traffic_Cone_Two_Color_Single_Extruder.gcode', 'w') as dst:
 	with open('Traffic_Cone_Dual_Extrusion/Traffic_Cone_Rings.amf.gcode', 'r') as src:
-		t_appearances = {}
+		t_appearances = {'0':-1}
 		z_just_changed = False
 		for line in src:
 			words = line.split()
@@ -17,6 +17,8 @@ with open('Traffic_Cone_Two_Color_Single_Extruder.gcode', 'w') as dst:
 				if cmd[1] not in t_appearances:
 					t_appearances[cmd[1]] = 0
 				t_appearances[cmd[1]] += 1
+				if t_appearances[cmd[1]] == 1 and z_just_changed:
+					dst.write('G1 E1.00000\n')
 				if t_appearances[cmd[1]] > 1:
 					if not z_just_changed:
 						if cmd[1] == '0':

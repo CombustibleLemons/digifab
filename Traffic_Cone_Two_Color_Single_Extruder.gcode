@@ -623,7 +623,7 @@ G92 E0
 G1 Z0.650 F7800.000
 ; This is the beginning of a color change
 G92 E0
-; Z had just changed
+G1 E1.00000
 ; This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
