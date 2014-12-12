@@ -12,16 +12,17 @@
 
 G21 ; set units to millimeters
 M107
-M104 S200 T0 ; set temperature
-M104 S200 T1 ; set temperature
+M104 S200 ; set temperature 
 G28 ; home all axes
 G1 Z5 F5000 ; lift nozzle
-M109 S200 T0 ; wait for temperature to be reached
-M109 S200 T1 ; wait for temperature to be reached
+M109 S200 ; wait for temperature to be reached 
 G90 ; use absolute coordinates
 G92 E0
 M82 ; use absolute distances for extrusion
-T0
+; This is the beginning of a color change
+; Old line = T0
+G92 E0
+; This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
 G92 E0
@@ -173,7 +174,10 @@ G1 X32.914 Y37.034 E25.05597
 G1 X33.144 Y36.649 E25.09743
 G1 X34.044 Y35.410 E25.23906
 G1 X34.300 Y35.118 E25.27497
-T1
+; This is the beginning of a color change
+; Old line = T1
+G92 E0
+; This is the end of a color change
 G92 E0
 G1 X34.818 Y35.491 F7800.000
 G1 X35.843 Y34.511 E0.13112 F1080.000
@@ -319,7 +323,10 @@ G1 X34.006 Y37.686 E22.60112
 G1 X34.236 Y37.301 E22.64257
 G1 X35.002 Y36.247 E22.76313
 G1 X35.257 Y35.954 E22.79904
-T0
+; This is the beginning of a color change
+; Old line = T0
+G92 E0
+; This is the end of a color change
 G92 E0
 G1 X35.775 Y36.327 F7800.000
 G1 X36.635 Y35.505 E0.11004 F1080.000
@@ -764,7 +771,11 @@ G1 X44.304 Y57.669 E1.36105
 G1 X44.416 Y57.781 E1.37573
 G1 X42.303 Y57.881 E1.57132
 G1 X42.121 Y57.699 E1.59523
-T1
+; This is the beginning of a color change
+; Old line = T1
+G92 E0
+G1 E-1.00000
+; This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
 G92 E0
@@ -841,7 +852,11 @@ M106 S255
 G1 F1800.000 E4.11222
 G92 E0
 G1 Z0.650 F7800.000
-T0
+; This is the beginning of a color change
+; Old line = T0
+G92 E0
+; Z had just changed
+; This is the end of a color change
 G92 E0
 G1 F1800.000 E-1.00000
 G92 E0
@@ -5466,7 +5481,11 @@ G1 X55.872 Y51.534 E2.15281
 G1 F1800.000 E1.15281
 G92 E0
 G1 Z5.450 F7800.000
-T1
+; This is the beginning of a color change
+; Old line = T1
+G92 E0
+; Z had just changed
+; This is the end of a color change
 G92 E0
 G1 X55.483 Y51.484 F7800.000
 G1 E1.00000 F1800.000
@@ -9025,7 +9044,11 @@ G1 X49.930 Y45.034 E5.05264
 G1 F1800.000 E4.05264
 G92 E0
 G1 Z10.250 F7800.000
-T0
+; This is the beginning of a color change
+; Old line = T0
+G92 E0
+; Z had just changed
+; This is the end of a color change
 G92 E0
 G1 X49.990 Y45.416 F7800.000
 G1 E1.00000 F1800.000
@@ -12682,7 +12705,11 @@ G1 X49.770 Y46.208 E4.09788
 G1 F1800.000 E3.09788
 G92 E0
 G1 Z15.350 F7800.000
-T1
+; This is the beginning of a color change
+; Old line = T1
+G92 E0
+; Z had just changed
+; This is the end of a color change
 G92 E0
 G1 X49.833 Y46.584 F7800.000
 G1 E1.00000 F1800.000
@@ -15643,7 +15670,11 @@ G1 X49.806 Y47.376 E3.14122
 G1 F1800.000 E2.14122
 G92 E0
 G1 Z20.450 F7800.000
-T0
+; This is the beginning of a color change
+; Old line = T0
+G92 E0
+; Z had just changed
+; This is the end of a color change
 G92 E0
 G1 X49.886 Y47.752 F7800.000
 G1 E1.00000 F1800.000
@@ -17583,7 +17614,6 @@ G1 X49.858 Y48.464 E2.25419
 G1 F1800.000 E1.25419
 G92 E0
 M107
-M104 S0 ; turn off temperature
 G28 X0  ; home X axis
 M84     ; disable motors
 ; filament used = 315.1mm (0.8cm3)
