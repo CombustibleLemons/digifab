@@ -1,7 +1,7 @@
 import re
 
-with open('trafficCone.gcode', 'w') as dst:
-	with open('Traffic_Cone_Dual_Extrusion/Traffic_Cone_rings.amf.gcode', 'r') as src:
+with open('examplecone1extruder.gcode', 'w') as dst:
+	with open('examplecone.amf.gcode', 'r') as src:
 		t_appearances = {'0':-1}
 		z_just_changed = False
 		for line in src:
