@@ -11,7 +11,7 @@ with open('Traffic_Cone_Two_Color_Single_Extruder.gcode', 'w') as dst:
 				cmd = 'foobar'
 
 			if cmd[0] == 'T':
-				dst.write('This is the beginning of a color change\n')
+				dst.write('; This is the beginning of a color change\n')
 				dst.write('G92 E0\n')
 				if cmd[1] not in t_appearances:
 					t_appearances[cmd[1]] = 0
@@ -21,7 +21,7 @@ with open('Traffic_Cone_Two_Color_Single_Extruder.gcode', 'w') as dst:
 						dst.write('G1 E1.00000\n')
 					else:
 						dst.write('G1 E-1.00000\n')
-				dst.write('This is the end of a color change\n')
+				dst.write('; This is the end of a color change\n')
 			elif (cmd == 'M104' or cmd == 'M109'):
 				m = re.search('T0', line)
 				if m:
