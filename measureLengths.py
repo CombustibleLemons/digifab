@@ -5,8 +5,6 @@ from extrusions import calc_lengths
 
 def measure_lengths(serial_fd, channel, color_lengths):
     ser = serial.Serial(4, 115200)
-    # hello = HelloWorld(ser)
-    # hello.main()
 
     for length in color_lengths:
         print "Load extruder ", length[0]
@@ -36,7 +34,7 @@ def measure_lengths(serial_fd, channel, color_lengths):
 if __name__ == "__main__":
     # Parse the arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('--filename', default='Traffic_Cone_Dual_Extrusion\Traffic_Cone_Rings.amf.gcode')
+    parser.add_argument('--filename', default='examplecone.amf.gcode')
     parser.add_argument('--serial_port', default=4)
     parser.add_argument('--channel', default=115200)
     args = parser.parse_args()
@@ -60,4 +58,5 @@ if __name__ == "__main__":
         color_lengths[i+1] = second
 
     # Talk to the Arduino in order to print out the appropriate lengths
-    measure_lengths(args.serial_port, args.channel, color_lengths)
+    # Ignore the first two, those are the skirt, and we do not care about them at all.
+    measure_lengths(args.serial_port, args.channel, color_lengths[2:])
