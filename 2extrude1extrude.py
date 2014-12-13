@@ -1,5 +1,6 @@
 import re
 
+# Hard coded input and output paths
 with open('examplecone1extruder.gcode', 'w') as dst:
 	with open('examplecone.amf.gcode', 'r') as src:
 		t_appearances = {'0':-1}
